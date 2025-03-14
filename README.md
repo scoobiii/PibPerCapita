@@ -1,18 +1,18 @@
-# PibPerCapita
+# PibPerCapita Nacional | Marica RJ | Noruega
 
-2003. US$3000
-2013. US$13.400,00
-2014. .
-2015. .
-2016. .
-2017. .
-2018. .
-2019. .
-2020. .
-2021. .
-2022. .
-2023. .
-2024. .
+  2003. US$3000 | US$2000
+  2013. US$13.400,00
+  2014. .
+  2015. .
+  2016. .
+  2017. .
+  2018. .
+  2019. .  US$8000 | US$100.000,00
+  2020. .
+  2021. .
+  2022. .
+  2023. .
+  2024. .
 
 
 Aqui está a organização dos dados fornecidos em um formato JSON estruturado, seguido de uma explicação sobre como gerar visualizações de **Treemap** e **Sankey**. Além disso, incluí uma estimativa sobre a proporção do PIB que entra e sai pelo orçamento normal, secreto e emendas parlamentares.
@@ -174,4 +174,3 @@ Aqui está a organização dos dados fornecidos em um formato JSON estruturado, 
 
 ---
 
-Se precisar de ajuda para criar as visualizações em uma ferramenta específica, é só avisar!
