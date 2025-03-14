@@ -2,7 +2,7 @@
   
     2003. US$3000 | US$2000.
     2013. US$13.400,00.
-    2014. .
+    2014. . 
     2015. .
     2016. .
     2017. .
@@ -103,16 +103,7 @@ Essas estimativas são baseadas em fontes do IBGE, Ministério da Economia e out
 
 ---
 
-### **JSON Estruturado**
-
-```json
-
-
-Aqui está o JSON atualizado, incluindo a **economia normal** com os setores detalhados que você forneceu. O JSON agora está organizado para refletir tanto a economia formal quanto a informal/ilegal, além das distribuições regionais e orçamentárias.
-
----
-
-### **JSON Atualizado**
+### **JSON Estruturado
 
 ```json
 {
