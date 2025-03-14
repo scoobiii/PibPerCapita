@@ -17,18 +17,157 @@
 
 Aqui está a organização dos dados fornecidos em um formato JSON estruturado, seguido de uma explicação sobre como gerar visualizações de **Treemap** e **Sankey**. Além disso, incluí uma estimativa sobre a proporção do PIB que entra e sai pelo orçamento normal, secreto e emendas parlamentares.
 
+Aqui está a distribuição do PIB brasileiro com setores mais detalhados:
+
+1. Setor de Serviços (67% do PIB)
+
+Comércio: ~11%
+
+Administração pública, saúde e educação: ~15%
+
+Transportes e logística: ~6%
+
+Serviços financeiros: ~6%
+
+Imobiliário e aluguel: ~8%
+
+Tecnologia da Informação (TI) e telecomunicações: ~5%
+
+Entretenimento e mídia: ~2%
+
+Turismo e hotelaria: ~1%
+
+Outros serviços: ~13%
+
+
+2. Setor Industrial (27,5% do PIB)
+
+Indústria de transformação: ~15%
+
+Automobilística, eletrônicos, química, farmacêutica, metalurgia, alimentos e bebidas, etc.
+
+
+Construção civil: ~5%
+
+Petróleo e gás: ~3%
+
+Indústria extrativa mineral: ~2,5%
+
+Outras indústrias: ~2%
+
+
+3. Setor Agrícola (5,5% do PIB)
+
+Soja, milho e grãos: ~2%
+
+Pecuária (bovinos, suínos, aves): ~1,5%
+
+Cana-de-açúcar e biocombustíveis: ~1%
+
+Café, frutas e hortaliças: ~0,5%
+
+Outras culturas agrícolas: ~0,5%
+
+
+4. Indústrias Criativas (parte do setor de serviços)
+
+Audiovisual (cinema, TV, streaming, games): ~0,5%
+
+Design, arquitetura e moda: ~0,3%
+
+Publicidade e marketing: ~0,5%
+
+Música, artes e cultura: ~0,2%
+
+
+5. Turismo (~1% do PIB - incluído no setor de serviços)
+
+Hospedagem e alimentação: ~0,5%
+
+Transportes e passeios turísticos: ~0,3%
+
+Eventos e entretenimento: ~0,2%
+
+
+6. Setor de Jogos (ainda pequeno, mas crescente)
+
+Desenvolvimento de jogos digitais: <0,1%
+
+E-sports e streaming de games: <0,05%
+
+
+Essas estimativas são baseadas em fontes do IBGE, Ministério da Economia e outras pesquisas setoriais. Se precisar de uma visualização em Sankey ou Treemap, posso gerar para você.
+
+
+
+
 ---
 
 ### **JSON Estruturado**
 
 ```json
+
+
+Aqui está o JSON atualizado, incluindo a **economia normal** com os setores detalhados que você forneceu. O JSON agora está organizado para refletir tanto a economia formal quanto a informal/ilegal, além das distribuições regionais e orçamentárias.
+
+---
+
+### **JSON Atualizado**
+
+```json
 {
   "PIB_Brasil": {
     "total": "100%",
-    "setores": {
-      "servicos": "67%",
-      "industrial": "27.5%",
-      "agricola": "5.5%"
+    "economia_normal": {
+      "total": "85%",
+      "setores": {
+        "servicos": {
+          "total": "67%",
+          "comercio": "11%",
+          "administracao_publica_saude_educacao": "15%",
+          "transportes_logistica": "6%",
+          "servicos_financeiros": "6%",
+          "imobiliario_aluguel": "8%",
+          "tecnologia_informacao_telecomunicacoes": "5%",
+          "entretenimento_midia": "2%",
+          "turismo_hotelaria": "1%",
+          "outros_servicos": "13%"
+        },
+        "industrial": {
+          "total": "27.5%",
+          "industria_transformacao": "15%",
+          "construcao_civil": "5%",
+          "petroleo_gas": "3%",
+          "industria_extrativa_mineral": "2.5%",
+          "outras_industrias": "2%"
+        },
+        "agricola": {
+          "total": "5.5%",
+          "soja_milho_graos": "2%",
+          "pecuaria": "1.5%",
+          "cana_de_acucar_biocombustiveis": "1%",
+          "cafe_frutas_hortalicas": "0.5%",
+          "outras_culturas_agricolas": "0.5%"
+        },
+        "industrias_criativas": {
+          "total": "1.5%",
+          "audiovisual": "0.5%",
+          "design_arquitetura_moda": "0.3%",
+          "publicidade_marketing": "0.5%",
+          "musica_artes_cultura": "0.2%"
+        },
+        "turismo": {
+          "total": "1%",
+          "hospedagem_alimentacao": "0.5%",
+          "transportes_passeios_turisticos": "0.3%",
+          "eventos_entretenimento": "0.2%"
+        },
+        "jogos": {
+          "total": "0.15%",
+          "desenvolvimento_jogos_digitais": "0.1%",
+          "esports_streaming_games": "0.05%"
+        }
+      }
     },
     "economia_informal_ilegal": {
       "total": "15%",
@@ -122,6 +261,35 @@ Aqui está a organização dos dados fornecidos em um formato JSON estruturado, 
 }
 ```
 
+---
+
+### **Como Gerar Visualizações**
+
+#### **1. Treemap**
+- **Ferramentas**: Use **Flourish**, **RAWGraphs** ou **Tableau**.
+- **Dados**: Utilize o JSON acima, especialmente os campos `economia_normal` e `economia_informal_ilegal`.
+- **Exemplo**:
+  - Nível 1: Economia Normal (85%) vs. Economia Informal/Ilegal (15%).
+  - Nível 2: Setores (Serviços, Industrial, Agrícola, etc.).
+  - Nível 3: Subsetores (Comércio, Transportes, Apostas, Contrabando, etc.).
+
+#### **2. Sankey**
+- **Ferramentas**: Use **Flourish** ou **RAWGraphs**.
+- **Dados**: Utilize o JSON acima, especialmente os campos `economia_normal` e `economia_informal_ilegal`.
+- **Exemplo**:
+  - Nós: Setores (Serviços, Industrial, Agrícola, etc.).
+  - Fluxos: Movimentação de recursos entre setores formais e informais.
+
+---
+
+### **Orçamento Público e Emendas**
+- **Orçamento Normal**: 33% do PIB (carga tributária).
+- **Orçamento Secreto**: 1.5% do PIB.
+- **Emendas Parlamentares**: 0.5% do PIB.
+
+---
+
+Se precisar de ajuda para criar as visualizações ou ajustar o JSON, é só avisar!
 ---
 
 ### **Como Gerar Visualizações**
